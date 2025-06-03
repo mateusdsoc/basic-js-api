@@ -11,15 +11,17 @@ import cookieParser from 'cookie-parser';
 
 const app = express();  
 
+//basic configs: json, cookies and url
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cookieParser);
+app.use(cookieParser());
 
+//routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/subscriptions', subscriptionRouter);
 
-
+//middleware created to error handling
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
