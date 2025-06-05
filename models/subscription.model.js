@@ -39,7 +39,7 @@ const subscriptionSchema = mongoose.Schema({
     },
     startDate:{
         type: Date,
-        required:[true, "date needs to exist"],
+        required:[true, "Start date needs to exist"],
         validate:{
             validator: (value) => value <= new Date(),
             message: "Start date must be in the past",
@@ -47,7 +47,7 @@ const subscriptionSchema = mongoose.Schema({
     },
     renewalDate:{
         type: Date,
-        required:[true, "date needs to exist"],
+        required:[false, "Renewal date needs to exist"],
         validate:{
             validator: function (value){
                 return value > this.startDate;

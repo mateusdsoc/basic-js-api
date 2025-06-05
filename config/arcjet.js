@@ -12,13 +12,13 @@ const aj = arcjet({
     shield({ mode: "LIVE" }),
 
     // Create a bot detection rule
-    detectBot({
+    /*detectBot({
       mode: "LIVE",
       
       allow: [
         "CATEGORY:SEARCH_ENGINE"
       ],
-    }),
+    }),*/
     // Create a token bucket rate limit. Other algorithms are supported.
     tokenBucket({
       mode: "LIVE",

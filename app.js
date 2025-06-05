@@ -2,9 +2,9 @@ import express, { json, urlencoded } from 'express';
 
 import {PORT} from './config/env.js';
 
-import userRouter from './routes/users.route.js';
-import authRouter from './routes/auth.routes.js';
-import subscriptionRouter from './routes/subscription.router.js';
+import userRoutes from './routes/users.routes.js';
+import authRoutes from './routes/auth.routes.js';
+import subscriptionRoutes from './routes/subscription.routes.js';
 import connectToDatabase from './database/mongoDB.js';
 import errorMiddleware from './middlewares/error.middleware.js';
 import cookieParser from 'cookie-parser';
@@ -19,9 +19,9 @@ app.use(cookieParser());
 app.use(arcjetMiddleware);
 
 //routes
-app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/users', userRouter);
-app.use('/api/v1/subscriptions', subscriptionRouter);
+app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/subscriptions', subscriptionRoutes);
 
 //middleware created to error handling
 app.use(errorMiddleware);
