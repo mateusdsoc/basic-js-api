@@ -5,6 +5,7 @@ export const createSubscription = async (req, res, next) => {
         const subscription = await Subscription.create({
             ...req.body,
             user: req.user._id,
+            renewalDate: (req.body.starterDate + 30)
         });
 
         res.status(201).json({
