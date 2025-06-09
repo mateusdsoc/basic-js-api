@@ -8,4 +8,4 @@ O sistema consiste em um CRUD básico somente para testar tecnologias novas. Obj
 5) Envio de email a cada x dias relembrando da renovação da assinatura
 6) Integração com DB NoSQL
 
-Algumas tecnologias a serem citadas foram: Express| ESLint| ArcJet| UpsTash| MongoDB.
+Algumas tecnologias a serem citadas foram: Express| ESLint| ArcJet| UpsTash| MongoDB| Prisma
